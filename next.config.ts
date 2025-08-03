@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  basePath: "",
+  basePath: "/doc",
   output: "export",
 };
 
