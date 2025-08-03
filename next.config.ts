@@ -1,8 +1,5 @@
 import type { NextConfig } from "next";
 
-// const isProd = process.env.NODE_ENV === "production";
-// const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1] || "";
-
 const nextConfig: NextConfig = {
   async redirects() {
     return [
@@ -13,6 +10,7 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  basePath: "",
 };
 
 export default nextConfig;
