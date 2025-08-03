@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  basePath: "",
   output: "export",
 };
 
