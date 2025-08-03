@@ -34,7 +34,7 @@ const Hero = () => {
       <div className="relative w-[50%] lg:w-[20%] aspect-square">
         <Image
           className="rounded-full sm:w-fit "
-          src="/images/shashank.jpeg"
+          src="./images/shashank.jpeg"
           alt="Shashank"
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
