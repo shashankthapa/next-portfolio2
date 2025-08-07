@@ -25,9 +25,12 @@ const Hero = () => {
         <div>
           <TechStack />
         </div>
-        <div className="">
-          <Link about="Contact me" href="/contact">
-            <Button />
+        <div className="flex">
+          <Link href="/contact">
+            <Button name="Contact Me" />
+          </Link>
+          <Link href="/resume/shashank_thapa.pdf">
+            <Button name="Download My Resume" />
           </Link>
         </div>
       </div>

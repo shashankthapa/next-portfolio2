@@ -5,6 +5,7 @@ interface ExperienceProps {
   companyPosition?: string;
   companyAccomplishments: string[];
 }
+
 interface ExperiencePropsList {
   companyName: string;
   companyArea: string;
