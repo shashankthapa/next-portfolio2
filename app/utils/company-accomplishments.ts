@@ -4,8 +4,30 @@ export const companyAccomplishments_1 = [
   `Integrated secure authentication (JWT/OAuth2) and implemented role-based access control (RBAC) across multiple projects,improving application security and compliance.`,
 ];
 
-export const companyAccomplishments_2 = [
-  `Designed and delivered curriculum for Database Management Systems (DBMS) and JavaScript programming, improving student exam performance by 25% year-over-year.`,
-  `Taught over 300 students across 4 semesters, incorporating hands-on projects and real-world examples to boost engagement and practical understanding.`,
-  `Developed lab modules and assignments covering SQL, normalization, MongoDB, and modern JavaScript (ES6+), leading to a 95% lab completion rat`,
-];
+export const positions_responsibilties = {
+  "Software Developer": {
+    date: "Jan 2024 - Present",
+    responsibilties: [
+      "Built a robust API that improved the scalability leading to 25% reduction in loading time for frontend improving the user experience.",
+      "Engineered voice bots using JS, Node JS and internal APIs to automate customer interactions leading to 30% increase in customer satisfaction scores.",
+      "Developed a mailing system which delivers automated emails when customer raises a issue in the platform leading to customer commitment by 20%.",
+    ],
+  },
+  "Software Developer Associate": {
+    date: "July 2022 - Jan 2024",
+    responsibilties: [
+      "Proficiently managed websites and databases which ran on Nodejs, ExpressJs, Mongo, WebSockets, ReactJs",
+      "Successfully resolved the bugs leading to the noticeable improvements in speed and functionality of client’s websites",
+      "Provided swift solutions to the team which resulted in faster deployment cycles",
+      "Spearheaded optimization on MySQL database to optimize data retrieval time",
+    ],
+  },
+  "Software Development Intern": {
+    date: "Jan 2022 - June 2022",
+    responsibilties: [
+      "Assisted in development and accumulated hands-on experience with JS language and its frameworks.",
+      "Contributed in projects while meeting deadlines and maintaining best programming practices",
+      "Actively learned new libraries like React and also showcasing rapid technical growth and supporting team objectives during the internship",
+    ],
+  },
+};

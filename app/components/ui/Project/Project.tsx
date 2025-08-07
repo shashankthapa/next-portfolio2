@@ -10,20 +10,11 @@ const Project = () => {
         <div className="text-center text-2xl sm:text-4xl font-extrabold p-10">
           <h1>PROJECTS</h1>
         </div>
-        <div className="flex flex-col items-end mt-5 md:lg:mt-10 ">
-          <div className="mt-3 px-5 w-full lg:w-[55%] space-y-5 md:lg:space-y-9">
-            <ProjectCard
-              projectSrc="https://spotify-profile.herokuapp.com/"
-              imageSrc="/images/spotify.png"
-              projectName={project_1}
-            />
-            <ProjectCard
-              projectSrc="https://github.com/Shashankthapa/employee-management-system"
-              imageSrc="/images/employee-management.png"
-              projectName={project_2}
-            />
-          </div>
-        </div>
+        <ProjectCard
+          projectSrc="https://spotify-profile.herokuapp.com/"
+          imageSrc="/images/spotify.png"
+          projectName={project_1}
+        />
       </div>
     </Reveal>
   );

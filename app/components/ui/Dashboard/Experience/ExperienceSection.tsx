@@ -2,11 +2,26 @@ import React from "react";
 
 interface ExperienceProps {
   companyName: string;
-  companyPosition: string;
+  companyPosition?: string;
   companyAccomplishments: string[];
 }
+interface ExperiencePropsList {
+  companyName: string;
+  companyArea: string;
+  dates: string;
+  positions_responsibilties: details;
+}
 
-const ExperienceSection: React.FC<ExperienceProps> = ({
+interface details {
+  [key: string]: date_responsibilities;
+}
+
+interface date_responsibilities {
+  date: string;
+  responsibilties: string[];
+}
+
+export const ExperienceSection: React.FC<ExperienceProps> = ({
   companyName,
   companyPosition,
   companyAccomplishments,
@@ -26,8 +41,38 @@ const ExperienceSection: React.FC<ExperienceProps> = ({
         ))}
       </ul>
     </>
-    // </div>
   );
 };
 
-export default ExperienceSection;
+export const ExperienceSectionList: React.FC<ExperiencePropsList> = ({
+  companyName,
+  companyArea,
+  dates,
+  positions_responsibilties,
+}) => {
+  return (
+    <div className="p-5">
+      <div className="lg:list-disc text-sm sm:text-2xl">
+        <span className="font-bold">{companyName}</span>
+        {companyArea}
+        {dates}
+      </div>
+
+      <div className="mt-4 space-y-4">
+        {Object.entries(positions_responsibilties).map(([role, details]) => (
+          <div key={role}>
+            <h4 className="font-semibold">{role}</h4>
+            <p className="italic text-sm">{details.date}</p>
+            <ul className="list-disc ml-5 mt-2 space-y-1">
+              {details.responsibilties.map((item, index) => (
+                <li key={index} className="text-sm">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
