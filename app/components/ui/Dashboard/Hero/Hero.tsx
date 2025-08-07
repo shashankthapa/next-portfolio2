@@ -25,11 +25,11 @@ const Hero = () => {
         <div>
           <TechStack />
         </div>
-        <div className="flex">
+        <div className="flex space-x-2">
           <Link href="/contact">
             <Button name="Contact Me" />
           </Link>
-          <Link href="/resume/shashank_thapa.pdf">
+          <Link href="/resume/shashank_thapa.pdf" target="_blank">
             <Button name="Download My Resume" />
           </Link>
         </div>
