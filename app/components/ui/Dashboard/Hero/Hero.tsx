@@ -29,7 +29,7 @@ const Hero = () => {
           <Link href="/contact">
             <Button name="Contact Me" />
           </Link>
-          <Link href="/resume/shashank_thapa.pdf" target="_blank">
+          <Link about="shashank_thapa_resume" href="/resume/shashank_thapa.pdf" target="_blank">
             <Button name="Download My Resume" />
           </Link>
         </div>
