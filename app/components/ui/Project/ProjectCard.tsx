@@ -10,10 +10,12 @@ const ProjectCard: React.FC<projectProps> = ({ projectName }) => {
       <div className="flex space-x-2 items-center text-lg font-bold">
         <p>{projectName[0]}</p>
       </div>
-      <div>
-        <div className="italic">{projectName[1]}</div>
+      <div className="italic">{projectName[1]}</div>
+      <div className="ml-5">
         {projectName[2].map((key, idx) => (
-          <div className="text-sm" key={idx}>{key}</div>
+          <ul key={idx} className="list-disc mt-1">
+            <li className="text-sm">{key}</li>
+          </ul>
         ))}
       </div>
     </div>

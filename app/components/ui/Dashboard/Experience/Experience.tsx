@@ -6,8 +6,8 @@ import { positions_responsibilties } from "@/app/utils/company-accomplishments";
 const Experience = () => {
   return (
     <Reveal id="experience">
-      <div className="flex flex-col items-center mt-10">
-        <div className="w-full lg:w-[65%]">
+      <div className="flex justify-center w-full p-5 md:lg:p-10">
+        <div className="flex flex-col items-center md:lg:max-w-[40%]">
           <div className="text-center py-10 text-2xl sm:text-4xl font-extrabold">
             EXPERIENCE
           </div>

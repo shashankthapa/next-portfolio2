@@ -6,10 +6,10 @@ import Reveal from "../Reveal";
 const Project = () => {
   return (
     <Reveal id="project">
-      <div className="flex flex-col items-center mt-10 h-fit overflow-hidden">
-        <div className="w-full lg:w-[65%]">
-          <div className="text-center text-2xl sm:text-4xl font-extrabold p-10">
-            <h1>PROJECTS</h1>
+      <div className="flex justify-center w-full p-5 md:lg:p-10 ">
+        <div className="flex flex-col items-start  mt-10 h-fit md:lg:max-w-[40%]">
+          <div className="text-center w-full text-2xl sm:text-4xl font-extrabold p-10">
+            <div>PROJECTS</div>
           </div>
           <ProjectCard
             projectName={[
