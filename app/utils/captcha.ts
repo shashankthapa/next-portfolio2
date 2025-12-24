@@ -1,6 +1,9 @@
+
+
 export async function getCaptchaToken() {
   return new Promise<string | null>((resolve) => {
     const sitekey = process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY;
+    console.log(sitekey)
     grecaptcha.ready(async () => {
       if (!sitekey) {
         resolve(null);

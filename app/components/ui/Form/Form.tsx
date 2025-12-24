@@ -14,16 +14,16 @@ const Form = () => {
     const token = await getCaptchaToken();
     setIsSubmitting(true);
     const data = {
-      token,
-      formName: formData.get('formName'),
-      formEmail: formData.get('formEmail'),
-      formMsg: formData.get('formMsg'),
+      // token,
+      formName: formData.get("formName"),
+      formEmail: formData.get("formEmail"),
+      formMsg: formData.get("formMsg"),
     };
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
+      const response = await fetch("/api/contact", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
       });
@@ -35,7 +35,7 @@ const Form = () => {
         toast.error(res.message);
       }
     } catch (error) {
-      toast.error('An error occurred');
+      toast.error("An error occurred");
     } finally {
       setIsSubmitting(false);
     }
