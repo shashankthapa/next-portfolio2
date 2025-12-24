@@ -19,13 +19,13 @@ const Experience = () => {
           />
           <ExperienceSectionList
             companyName="Siddhant College of Engineering"
-            companyArea=", Kathmandu Nepal"
+            companyArea=", Pune India"
             dates="(Jan 2025 - Present)"
             positions_responsibilties={positions_responsibilties}
           />
           <ExperienceSectionList
             companyName="DXP Systems"
-            companyArea=", Kathmandu Nepal"
+            companyArea=", Pune India"
             dates="(Jan 2025 - Present)"
             positions_responsibilties={positions_responsibilties}
           />
