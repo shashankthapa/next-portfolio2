@@ -48,7 +48,6 @@ export const ExperienceSection: React.FC<ExperienceProps> = ({
 export const ExperienceSectionList: React.FC<ExperiencePropsList> = ({
   companyName,
   companyArea,
-  dates,
   positions_responsibilties,
 }) => {
   return (
@@ -63,7 +62,6 @@ export const ExperienceSectionList: React.FC<ExperiencePropsList> = ({
         {Object.entries(positions_responsibilties).map(([role, details]) => (
           <div key={role}>
             <h4 className="font-semibold">{role}</h4>
-            <p className="italic text-sm">{details.date}</p>
             <ul className="list-disc ml-5 mt-2 space-y-1">
               {details.responsibilties.map((item, index) => (
                 <li key={index} className="text-sm">
