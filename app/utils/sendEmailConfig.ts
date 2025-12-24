@@ -1,4 +1,3 @@
-"use server";
 import nextConfig from "@/next.config";
 import { SendEmailCommand, SESClient } from "@aws-sdk/client-ses";
 

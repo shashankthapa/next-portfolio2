@@ -1,7 +1,6 @@
 "use client";
 import React, { FormEvent, useState } from "react";
 import FormButton from "./FormButton";
-import { submitAction } from "../../../utils/action";
 import { toast, ToastContainer } from "react-toastify";
 import { getCaptchaToken } from "../../../utils/captcha";
 
@@ -9,19 +8,36 @@ const Form = () => {
   const [submitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: FormEvent) => {
-    console.log(process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY);
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
     const token = await getCaptchaToken();
     setIsSubmitting(true);
-    const res = await submitAction(token, formData);
-    if (res.success) {
-      toast.success(res.message);
+    const data = {
+      token,
+      formName: formData.get('formName'),
+      formEmail: formData.get('formEmail'),
+      formMsg: formData.get('formMsg'),
+    };
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      const res = await response.json();
+      if (res.success) {
+        toast.success(res.message);
+        form.reset();
+      } else {
+        toast.error(res.message);
+      }
+    } catch (error) {
+      toast.error('An error occurred');
+    } finally {
       setIsSubmitting(false);
-      form.reset();
-    } else {
-      toast.error(res.message);
     }
   };
   return (
