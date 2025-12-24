@@ -1,7 +1,11 @@
 import React from "react";
 import { ExperienceSectionList } from "./ExperienceSection";
 import Reveal from "../../Reveal";
-import { positions_responsibilties } from "@/app/utils/company-accomplishments";
+import {
+  positions_responsibilties_webmalaya,
+  positions_responsibilties_siddhant,
+  positions_responsibilties_dxp,
+} from "@/app/utils/company-accomplishments";
 
 const Experience = () => {
   return (
@@ -14,17 +18,17 @@ const Experience = () => {
           <ExperienceSectionList
             companyName="Webmalaya Tech Enterprise"
             companyArea=", Kathmandu Nepal"
-            positions_responsibilties={positions_responsibilties}
+            positions_responsibilties={positions_responsibilties_webmalaya}
           />
           <ExperienceSectionList
             companyName="Siddhant College of Engineering"
             companyArea=", Pune India"
-            positions_responsibilties={positions_responsibilties}
+            positions_responsibilties={positions_responsibilties_siddhant}
           />
           <ExperienceSectionList
             companyName="DXP Systems"
-            companyArea=", Pune India"            
-            positions_responsibilties={positions_responsibilties}
+            companyArea=", Pune India"
+            positions_responsibilties={positions_responsibilties_dxp}
           />
         </div>
       </div>

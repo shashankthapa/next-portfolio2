@@ -9,7 +9,6 @@ interface ExperienceProps {
 interface ExperiencePropsList {
   companyName: string;
   companyArea: string;
-  dates: string;
   positions_responsibilties: details;
 }
 
@@ -55,7 +54,6 @@ export const ExperienceSectionList: React.FC<ExperiencePropsList> = ({
       <div className="lg:list-disc text-sm sm:text-2xl">
         <span className="font-bold">{companyName}</span>
         {companyArea}
-        {dates}
       </div>
 
       <div className="mt-4 space-y-4">
