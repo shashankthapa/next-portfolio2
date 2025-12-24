@@ -14,7 +14,7 @@ const Experience = () => {
           <ExperienceSectionList
             companyName="Webmalaya Tech Enterprise"
             companyArea=", Kathmandu Nepal"
-            dates="(Jan 2022 - Present)"
+            dates="(Jan 2025 - Present)"
             positions_responsibilties={positions_responsibilties}
           />
         </div>
