@@ -32,7 +32,7 @@ const Form = () => {
         toast.success(res.msg);
         form.reset();
       } else {
-        toast.error(res.message);
+        toast.error(res.msg);
       }
     } catch (error) {
       toast.error(`An error occurred ${error}`);
