@@ -10,8 +10,8 @@ const Hero = () => {
     <Reveal
       id="hero"
       width="100%"
-      cssPropertyMotion="flex flex-col lg:flex-row justify-center items-center p-10 md:lg:p-35 w-full gap-3 sm:gap-5 md:gap-10"
-      cssProperty="flex items-center h-fit py-5"
+      cssPropertyMotion="flex flex-col lg:flex-row justify-center items-center md:lg:p-20 w-full gap-3 sm:gap-5 md:gap-10"
+      cssProperty="flex py-10 px-2 items-center h-fit"
     >
       <div className="font-sans text-4xl md:text-5xl lg:text-6xl w-full sm:w-full lg:md:w-[40%]">
         <div className="mt-10 font-extrabold mb-4 lg:mb-10">
@@ -19,7 +19,7 @@ const Hero = () => {
           <p className="text-sm sm:text-2xl">I MAKE PIXEL PERFECT WEBSITES</p>
         </div>
         <div className="text-xl font-bold w-full">
-          FULL Stack Developer with 3 years of experience building performant,
+          FULL Stack Developer with 1 year of experience building performant,
           user-focused web apps.
         </div>
         <div>

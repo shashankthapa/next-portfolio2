@@ -6,8 +6,8 @@ interface projectProps {
 
 const ProjectCard: React.FC<projectProps> = ({ projectName }) => {
   return (
-    <div className="p-5">
-      <div className="flex space-x-2 items-center text-lg font-bold">
+    <div>
+      <div className="text-lg font-bold">
         <p>{projectName[0]}</p>
       </div>
       <div className="italic">{projectName[1]}</div>
@@ -19,7 +19,6 @@ const ProjectCard: React.FC<projectProps> = ({ projectName }) => {
         ))}
       </div>
     </div>
-    // </section>
   );
 };
 

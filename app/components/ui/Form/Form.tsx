@@ -14,7 +14,7 @@ const Form = () => {
     const token = await getCaptchaToken();
     setIsSubmitting(true);
     const data = {
-      // token,
+      token,
       formName: formData.get("formName"),
       formEmail: formData.get("formEmail"),
       formMsg: formData.get("formMsg"),
@@ -29,13 +29,14 @@ const Form = () => {
       });
       const res = await response.json();
       if (res.success) {
-        toast.success(res.message);
+        toast.success(res.msg);
         form.reset();
       } else {
         toast.error(res.message);
       }
     } catch (error) {
-      toast.error("An error occurred");
+      toast.error(`An error occurred ${error}`);
+      console.log(error);
     } finally {
       setIsSubmitting(false);
     }

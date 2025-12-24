@@ -1,3 +1,4 @@
+"use server";
 import { verifyCaptchaToken } from "./captcha";
 import { sendEmail } from "./sendEmailConfig";
 
@@ -30,7 +31,7 @@ export async function submitAction(token: string | null, formData: FormData) {
     };
   }
 
-// amazon ses config
+  // amazon ses config
   const result = await sendEmail({ name, email, message });
   if (result.$metadata.httpStatusCode == 200) {
     return {

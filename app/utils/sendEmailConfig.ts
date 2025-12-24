@@ -26,7 +26,7 @@ export const sendEmail = async ({
 
   const params = {
     Destination: {
-      CcAddresses: [],
+      // CcAddresses: [],
       ToAddresses: ["shashankthapa022@gmail.com"],
     },
     Message: {
@@ -54,7 +54,7 @@ export const sendEmail = async ({
       },
     },
     Source: process.env.NEXT_PUBLIC_AWS_SES_SOURCE_EMAIL,
-    ReplyToAddresses: [],
+    // ReplyToAddresses: [],
   };
 
   try {

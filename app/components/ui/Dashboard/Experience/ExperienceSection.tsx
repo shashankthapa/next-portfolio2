@@ -50,7 +50,7 @@ export const ExperienceSectionList: React.FC<ExperiencePropsList> = ({
   positions_responsibilties,
 }) => {
   return (
-    <div className="p-5">
+    <div className="py-5">
       <div className="lg:list-disc text-sm sm:text-2xl">
         <span className="font-bold">{companyName}</span>
         {companyArea}
