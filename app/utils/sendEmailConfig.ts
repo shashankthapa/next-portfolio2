@@ -1,4 +1,4 @@
-"use server"
+import nextConfig from "@/next.config";
 import { SendEmailCommand, SESClient } from "@aws-sdk/client-ses";
 
 const SES_CONFIG = {
@@ -22,6 +22,8 @@ export const sendEmail = async ({
   email,
   message,
 }: ContactFormData): Promise<any> => {
+  console.log("Next.js Base Path:", nextConfig.basePath);
+
   const params = {
     Destination: {
       CcAddresses: [],

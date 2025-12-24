@@ -1,4 +1,3 @@
-"use server"
 import { verifyCaptchaToken } from "./captcha";
 import { sendEmail } from "./sendEmailConfig";
 

@@ -10,8 +10,8 @@ const Hero = () => {
     <Reveal
       id="hero"
       width="100%"
-      cssPropertyMotion="flex flex-col lg:flex-row justify-center items-center px-5 w-full gap-3 sm:gap-5 md:gap-10"
-      cssProperty="flex items-center h-fit py-5 lg:h-screen"
+      cssPropertyMotion="flex flex-col lg:flex-row justify-center items-center p-10 md:lg:p-35 w-full gap-3 sm:gap-5 md:gap-10"
+      cssProperty="flex items-center h-fit py-5"
     >
       <div className="font-sans text-4xl md:text-5xl lg:text-6xl w-full sm:w-full lg:md:w-[40%]">
         <div className="mt-10 font-extrabold mb-4 lg:mb-10">
@@ -25,9 +25,12 @@ const Hero = () => {
         <div>
           <TechStack />
         </div>
-        <div className="">
-          <Link about="Contact me" href="/contact">
-            <Button />
+        <div className="flex space-x-2">
+          <Link href="/contact">
+            <Button name="Contact Me" />
+          </Link>
+          <Link href="/resume/shashank_thapa_resume.pdf" target="_blank">
+            <Button name="Download My Resume" />
           </Link>
         </div>
       </div>
