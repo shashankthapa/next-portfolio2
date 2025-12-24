@@ -32,12 +32,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         env:
-        NEXT_PUBLIC_CAPTCHA_SITE_KEY: ${{ secrets.NEXT_PUBLIC_CAPTCHA_SITE_KEY }}
-        CAPTCHA_SECRET_KEY: ${{ secrets.CAPTCHA_SECRET_KEY}}
-        NEXT_PUBLIC_AWS_ACCESS_KEY: ${{ secrets.NEXT_PUBLIC_AWS_ACCESS_KEY}}
-        AWS_ACCESS_KEY_SECRET: ${{ secrets.AWS_ACCESS_KEY_SECRET}}
-        NEXT_PUBLIC_AWS_REGION: ${{ secrets.NEXT_PUBLIC_AWS_REGION}}
-        NEXT_PUBLIC_AWS_SES_SOURCE_EMAIL: ${{ secrets.NEXT_PUBLIC_AWS_SES_SOURCE_EMAIL}}
+          NEXT_PUBLIC_CAPTCHA_SITE_KEY: ${{ secrets.NEXT_PUBLIC_CAPTCHA_SITE_KEY }}
+        run: echo "RUN"
+        env:
+          CAPTCHA_SECRET_KEY: ${{ secrets.CAPTCHA_SECRET_KEY }}
+        run: echo "RUN"
+        env:
+          NEXT_PUBLIC_AWS_ACCESS_KEY: ${{ secrets.NEXT_PUBLIC_AWS_ACCESS_KEY }}
+        run: echo "RUN"
+        env:
+          AWS_ACCESS_KEY_SECRET: ${{ secrets.AWS_ACCESS_KEY_SECRET }}
+        run: echo "RUN"
+        env:
+          NEXT_PUBLIC_AWS_REGION: ${{ secrets.NEXT_PUBLIC_AWS_REGION }}
+        run: echo "RUN"
+        env:
+          NEXT_PUBLIC_AWS_SES_SOURCE_EMAIL: ${{ secrets.NEXT_PUBLIC_AWS_SES_SOURCE_EMAIL }}
+        run: echo "RUN"
 
       - name: Detect package manager
         id: detect-package-manager
